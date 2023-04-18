@@ -5,7 +5,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 function Buscar() {
   return (
     <Form>
-      <InputGroup className="mb-3">
+      <InputGroup>
         <Form.Control
           placeholder="Escribe el nombre de un Colaborador"
           aria-label="Escribe el nombre de un Colaborador"

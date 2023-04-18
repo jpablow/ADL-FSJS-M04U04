@@ -10,7 +10,9 @@ function Colaboradores() {
     <Container fluid="lg">
       <Accordion defaultActiveKey={['2']} alwaysOpen>
         <Accordion.Item eventKey="0">
-          <Accordion.Header>Agrega un Colaborador</Accordion.Header>
+          <Accordion.Header className="fs-1">
+            Agrega un Colaborador
+          </Accordion.Header>
           <Row>
             <Col></Col>
             <Col xs={12} md={10} lg={10} xl={10} xxl={8}>
