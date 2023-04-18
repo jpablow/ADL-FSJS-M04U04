@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 
 const Header = () => {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="primary" variant="dark">
       <Container>
         <Navbar.Brand>Buscador de Colaboradores</Navbar.Brand>
       </Container>
