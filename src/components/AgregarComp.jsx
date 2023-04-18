@@ -19,9 +19,11 @@ function Agregar() {
       >
         <Form.Control type="email" placeholder="Correo electrónico" />
       </FloatingLabel>
-      <Button variant="primary" size="lg" type="submit">
-        Agregar Colaborador
-      </Button>
+      <div className="d-grid gap-2">
+        <Button variant="primary" type="submit">
+          Agregar Colaborador
+        </Button>
+      </div>
     </Form>
   );
 }

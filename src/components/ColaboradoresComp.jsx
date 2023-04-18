@@ -46,7 +46,7 @@ function Colaboradores() {
         </Accordion.Body>
       </Accordion.Item> */}
         <Accordion.Item eventKey="2">
-          <h5 className="mt-3 text-center">Lista de Colaboradores</h5>
+          <h5 className="pt-3 text-center">Lista de Colaboradores</h5>
           <Row>
             <Col></Col>
             <Col xs={12} md={10} lg={10} xl={10} xxl={8}>
