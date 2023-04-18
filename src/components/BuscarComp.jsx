@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
-function Buscador() {
+function Buscar() {
   return (
     <Form>
       <InputGroup className="mb-3">
@@ -19,4 +19,4 @@ function Buscador() {
   );
 }
 
-export default Buscador;
+export default Buscar;

@@ -1,6 +1,6 @@
 import Accordion from 'react-bootstrap/Accordion';
-import Buscador from './BuscarComp';
-import Nuevo from './NuevoComp';
+import Buscar from './BuscarComp';
+import Agregar from './AgregarComp';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -15,7 +15,7 @@ function Colaboradores() {
             <Col></Col>
             <Col xs={12} md={10} lg={10} xl={10} xxl={8}>
               <Accordion.Body>
-                <Nuevo />
+                <Agregar />
               </Accordion.Body>
             </Col>
             <Col></Col>
@@ -27,7 +27,7 @@ function Colaboradores() {
             <Col></Col>
             <Col xs={12} md={10} lg={10} xl={10} xxl={8}>
               <Accordion.Body>
-                <Buscador />
+                <Buscar />
               </Accordion.Body>
             </Col>
             <Col></Col>
