@@ -1,13 +1,19 @@
+import { useState } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import Buscar from './BuscarComp';
 import Agregar from './AgregarComp';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import data from './colabs.json';
+import ListGroup from 'react-bootstrap/ListGroup';
+import { Badge, ListGroupItem } from 'react-bootstrap';
 
 function Colaboradores() {
+  const [colabs, setColabs] = useState(data);
+
   return (
-    <Container fluid="lg">
+    <Container fluid="lg" className="mt-3">
       <Accordion defaultActiveKey={['2']} alwaysOpen>
         <Accordion.Item eventKey="0">
           <Accordion.Header className="fs-1">
@@ -47,19 +53,22 @@ function Colaboradores() {
           culpa qui officia deserunt mollit anim id est laborum.
         </Accordion.Body>
       </Accordion.Item> */}
-        <Accordion.Item eventKey="2">
-          <h5 className="pt-3 text-center">Lista de Colaboradores</h5>
+        <Accordion.Item eventKey="2" className="py-4">
+          <h5 className="pt-4 text-center">Lista de Colaboradores</h5>
           <Row>
             <Col></Col>
-            <Col xs={12} md={10} lg={10} xl={10} xxl={8}>
+            <Col xs={10} md={8} lg={8} xl={7} xxl={6}>
               <Accordion.Body as="div">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
-                itaque reiciendis vel eligendi error ad quibusdam officiis iste,
-                nihil, rerum incidunt eum voluptate fuga temporibus quas commodi
-                doloremque voluptatum exercitationem praesentium provident porro
-                tempora sequi in quo! Temporibus veritatis saepe vel recusandae
-                dolorum corporis natus quisquam, inventore quasi architecto
-                quae!
+                {colabs.map((colab) => (
+                  <ListGroup key={colab.id}>
+                    <ListGroup.Item variant="info">
+                      {colab.nombre}
+                    </ListGroup.Item>
+                    <ListGroup.Item className="mb-2">
+                      {colab.correo}
+                    </ListGroup.Item>
+                  </ListGroup>
+                ))}
               </Accordion.Body>
             </Col>
             <Col></Col>

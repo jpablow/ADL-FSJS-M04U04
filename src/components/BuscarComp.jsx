@@ -4,7 +4,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 
 function Buscar() {
   return (
-    <Form>
+    <Form className="my-4">
       <InputGroup>
         <Form.Control
           placeholder="Escribe el nombre de un Colaborador"

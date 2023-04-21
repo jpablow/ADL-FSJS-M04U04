@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 
 function Agregar() {
   return (
-    <Form>
+    <Form className="my-5">
       <FloatingLabel
         controlId="floatingName"
         label="Nombre del Colaborador"
