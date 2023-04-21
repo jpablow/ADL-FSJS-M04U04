@@ -61,10 +61,10 @@ function Colaboradores() {
               <Accordion.Body as="div">
                 {colabs.map((colab) => (
                   <ListGroup key={colab.id}>
-                    <ListGroup.Item variant="info">
+                    <ListGroup.Item variant="info" className="wrap">
                       {colab.nombre}
                     </ListGroup.Item>
-                    <ListGroup.Item className="mb-2">
+                    <ListGroup.Item className="mb-2 wrap">
                       {colab.correo}
                     </ListGroup.Item>
                   </ListGroup>
