@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import Buscar from './BuscarComp';
 import Agregar from './AgregarComp';
@@ -9,7 +9,13 @@ import data from './colabs.json';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 function Colaboradores() {
+  const [arregloColabs, setArregloColabs] = useState(data);
   const [colabs, setColabs] = useState(data);
+  console.log(arregloColabs);
+
+  useEffect(() => {
+    setColabs(arregloColabs);
+  }, [arregloColabs]);
 
   return (
     <Container fluid="lg" className="mt-3">
@@ -22,7 +28,10 @@ function Colaboradores() {
             <Col></Col>
             <Col xs={12} md={10} lg={10} xl={10} xxl={8}>
               <Accordion.Body>
-                <Agregar />
+                <Agregar
+                  setArregloColabs={setArregloColabs}
+                  arregloColabs={arregloColabs}
+                />
               </Accordion.Body>
             </Col>
             <Col></Col>

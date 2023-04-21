@@ -4,8 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import data from './colabs.json';
 
-function Agregar() {
-  const [arregloColabs, setArregloColabs] = useState(data);
+function Agregar({ setArregloColabs, arregloColabs }) {
   const [nuevoColabNombre, setNuevoColabNombre] = useState('');
   const [nuevoColabCorreo, setNuevoColabCorreo] = useState('');
 
@@ -18,6 +17,7 @@ function Agregar() {
   };
 
   const handleSubmit = (e) => {
+    //Agregar el borrado de los inputs después de presionar el botón
     e.preventDefault();
     setArregloColabs([
       ...arregloColabs,
