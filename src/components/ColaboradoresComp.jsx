@@ -7,7 +7,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import data from './colabs.json';
 import ListGroup from 'react-bootstrap/ListGroup';
-import { Badge, ListGroupItem } from 'react-bootstrap';
 
 function Colaboradores() {
   const [colabs, setColabs] = useState(data);
@@ -41,18 +40,6 @@ function Colaboradores() {
             <Col></Col>
           </Row>
         </Accordion.Item>
-        {/* <Accordion.Item eventKey="1">
-        <Accordion.Header>Lista de Colaboradores</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item> */}
         <Accordion.Item eventKey="2" className="py-4">
           <h5 className="pt-4 text-center">Lista de Colaboradores</h5>
           <Row>
