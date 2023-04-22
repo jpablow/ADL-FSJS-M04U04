@@ -8,8 +8,8 @@ function Buscar() {
       <InputGroup>
         <Form.Control
           placeholder="Escribe el nombre de un Colaborador"
-          aria-label="Escribe el nombre de un Colaborador"
-          aria-describedby="basic-addon2"
+          // aria-label="Escribe el nombre de un Colaborador"
+          // aria-describedby="basic-addon"
         />
         <Button variant="outline-danger" id="button-addon2" type="reset">
           Borrar
