@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import data from './colabs.json';
-import ListGroup from 'react-bootstrap/ListGroup';
+import ListaColab from './Lista.Comp';
 
 function Colaboradores() {
   const [arregloColabs, setArregloColabs] = useState(data);
@@ -50,32 +50,7 @@ function Colaboradores() {
           </Row>
         </Accordion.Item>
         <Accordion.Item eventKey="2" className="py-4">
-          <h5 className="pt-4 text-center">Lista de Colaboradores</h5>
-          <Row>
-            <Col></Col>
-            <Col xs={10} md={8} lg={8} xl={7} xxl={6}>
-              <Accordion.Body as="div">
-                <p>{console.log(buscaColab)}</p>
-                {colabs
-                  .filter((colab) =>
-                    colab.nombre
-                      .toLowerCase()
-                      .includes(buscaColab.toLocaleLowerCase())
-                  )
-                  .map((colab) => (
-                    <ListGroup key={colab.id}>
-                      <ListGroup.Item variant="info" className="wrap">
-                        {colab.nombre}
-                      </ListGroup.Item>
-                      <ListGroup.Item className="mb-2 wrap">
-                        {colab.correo}
-                      </ListGroup.Item>
-                    </ListGroup>
-                  ))}
-              </Accordion.Body>
-            </Col>
-            <Col></Col>
-          </Row>
+          <ListaColab buscaColab={buscaColab} colabs={colabs} />
         </Accordion.Item>
       </Accordion>
     </Container>
