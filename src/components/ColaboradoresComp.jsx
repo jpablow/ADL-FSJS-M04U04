@@ -11,7 +11,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 function Colaboradores() {
   const [arregloColabs, setArregloColabs] = useState(data);
   const [colabs, setColabs] = useState(data);
-  console.log(arregloColabs);
+  const [buscaColab, setBuscaColab] = useState('');
 
   useEffect(() => {
     setColabs(arregloColabs);
@@ -43,7 +43,7 @@ function Colaboradores() {
             <Col></Col>
             <Col xs={12} md={10} lg={10} xl={10} xxl={8}>
               <Accordion.Body>
-                <Buscar />
+                <Buscar setBuscaColab={setBuscaColab} />
               </Accordion.Body>
             </Col>
             <Col></Col>
@@ -55,16 +55,23 @@ function Colaboradores() {
             <Col></Col>
             <Col xs={10} md={8} lg={8} xl={7} xxl={6}>
               <Accordion.Body as="div">
-                {colabs.map((colab) => (
-                  <ListGroup key={colab.id}>
-                    <ListGroup.Item variant="info" className="wrap">
-                      {colab.nombre}
-                    </ListGroup.Item>
-                    <ListGroup.Item className="mb-2 wrap">
-                      {colab.correo}
-                    </ListGroup.Item>
-                  </ListGroup>
-                ))}
+                <p>{console.log(buscaColab)}</p>
+                {colabs
+                  .filter((colab) =>
+                    colab.nombre
+                      .toLowerCase()
+                      .includes(buscaColab.toLocaleLowerCase())
+                  )
+                  .map((colab) => (
+                    <ListGroup key={colab.id}>
+                      <ListGroup.Item variant="info" className="wrap">
+                        {colab.nombre}
+                      </ListGroup.Item>
+                      <ListGroup.Item className="mb-2 wrap">
+                        {colab.correo}
+                      </ListGroup.Item>
+                    </ListGroup>
+                  ))}
               </Accordion.Body>
             </Col>
             <Col></Col>

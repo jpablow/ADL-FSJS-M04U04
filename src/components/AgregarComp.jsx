@@ -34,8 +34,8 @@ function Agregar({ setArregloColabs, arregloColabs }) {
         ...arregloColabs,
         {
           id: (arregloColabs.length + 1).toString(),
-          nombre: nuevoColabNombre,
-          correo: nuevoColabCorreo,
+          nombre: nuevoColabNombre.trim(),
+          correo: nuevoColabCorreo.trim(),
         },
       ]);
       handleShow();
