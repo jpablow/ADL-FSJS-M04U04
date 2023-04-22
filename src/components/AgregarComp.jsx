@@ -27,7 +27,9 @@ function Agregar({ setArregloColabs, arregloColabs }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (nuevoColabNombre === '' || nuevoColabCorreo === '') {
-      alert('Debe ingresar los datos del Colaborador para poder agregarlo');
+      alert(
+        'Debe ingresar todos los datos del Colaborador para poder agregarlo'
+      );
       return;
     } else {
       setArregloColabs([
@@ -82,7 +84,7 @@ function Agregar({ setArregloColabs, arregloColabs }) {
           />
         </FloatingLabel>
         <div className="d-grid gap-2">
-          <Button variant="primary" type="submit">
+          <Button variant="outline-primary" type="submit">
             Agregar Colaborador
           </Button>
         </div>
