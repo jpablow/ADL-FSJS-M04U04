@@ -5,7 +5,7 @@ import Agregar from './AgregarComp';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import data from './colabs.json';
+import data from '../assets/colabs.json';
 import ListaColab from './Lista.Comp';
 
 function Colaboradores() {
