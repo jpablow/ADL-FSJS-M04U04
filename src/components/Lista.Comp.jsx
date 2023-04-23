@@ -11,7 +11,6 @@ const ListaColab = ({ buscaColab, colabs }) => {
         <Col></Col>
         <Col xs={10} md={8} lg={8} xl={7} xxl={6}>
           <Accordion.Body as="div">
-            <p>{console.log(buscaColab)}</p>
             {colabs
               .filter((colab) =>
                 colab.nombre
